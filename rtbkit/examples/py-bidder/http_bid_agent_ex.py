@@ -203,6 +203,21 @@ class FixedPriceBidderMixIn():
         # ---
         # update bid with price and creatives
         # ---
+        
+        ##Matt Add: Call out to demand source here.
+        
+        # Logic for determining who to call. Currently only one source.
+        # Root URL: http://soma.smaato.net/oapi/reqAd.jsp?
+        # Set user agent from bid request.
+        
+        # Add required configured parameters.
+        # A/P id 0 can be used for testing
+        # iosadid googleadid iosadtracking googlednt mandatory by platform
+        ## adspace=0&pub=0&apiver=(5.0 or 500, something like that)&devip&device&format=img&formatstrict=true&response=html&
+        
+        # Check for values we care about, then insert into the query string.
+        
+        # Call out. See if a non-204 response is returned.
 
         # first we need to buid a dictionary
         # that correlates impressions from the request
